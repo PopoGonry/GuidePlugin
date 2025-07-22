@@ -1,0 +1,4 @@
+name: GuidePlugin
+version: '1.0-SNAPSHOT'
+main: com.popogonry.guidePlugin.GuidePlugin
+api-version: '1.21'
