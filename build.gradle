@@ -15,11 +15,26 @@ repositories {
     maven {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
+        maven {
+            url = 'https://repo.extendedclip.com/releases/'
+        }
     }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+    compileOnly files('libs/InfinityTower.jar')
+    compileOnly files('libs/AdvancedEnchantments-8.7.4.jar')
+    compileOnly files('libs/AdvancedSkills-1.5.2.jar')
+    compileOnly files('libs/Lands-7.12.5.jar')
+    compileOnly files('libs/ClueScrolls-5.0.8.jar')
+    compileOnly files('libs/BetterRTP-3.6.13.jar')
+    compileOnly files('libs/HQUpgrade.jar')
+    compileOnly files('libs/MMOItems-6.10.jar')
+    compileOnly files('libs/CustomCrops-3.6.39.jar')
+    compileOnly files('libs/evolution-1.0-SNAPSHOT.jar')
+
 }
 
 tasks {
@@ -55,5 +70,36 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('plugin.yml') {
         expand props
+    }
+}
+
+// 노트북
+
+//jar {
+//    archiveFileName = 'GuidePlugin.jar'
+//    destinationDirectory = file("C:\\Users\\rhtjd\\Desktop\\플러그인_개발_서버_모음\\1.21.1\\plugins")
+//    manifest {
+//        attributes 'Main-Class': 'com.popogonry.guidePlugin.GuidePlugin'
+//    }
+//}
+
+
+// 자취방
+//
+//jar {
+//    archiveFileName = 'GuidePlugin.jar'
+//    destinationDirectory = file("C:\\Users\\rhtjd\\바탕 화면\\마인크래프트 플러그인 개발\\1.21.1\\plugins")
+//    manifest {
+//        attributes 'Main-Class': 'com.popogonry.guidePlugin.GuidePlugin'
+//    }
+//}
+
+// 제천
+
+jar {
+    archiveFileName = 'GuidePlugin.jar'
+    destinationDirectory = file("C:\\Users\\rhtjd\\Desktop\\1.21.1\\plugins")
+    manifest {
+        attributes 'Main-Class': 'com.popogonry.guidePlugin.GuidePlugin'
     }
 }
